@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zerobranch.layout.SwipeLayout
+    android:id="@+id/swap"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:swipeDirection="right"
+    app:leftItem="@id/left"
+    app:draggedItem="@id/card"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="20dp"
+        android:padding="10dp"
+        app:cardCornerRadius="18dp"
+        android:layout_margin="8dp"
+        >
+        
+        <LinearLayout
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_red"
+            android:paddingHorizontal="48dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorRed"
+                android:src="@drawable/ic_delete"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="12dp"
+        app:contentPadding="12dp"
+        android:layout_margin="8dp">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <View
+                android:id="@+id/start_line"
+                android:layout_width="4dp"
+                android:layout_height="80dp"
+                android:background="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/tasktitleAddTaskStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/desc"
+                app:layout_constraintEnd_toStartOf="@+id/done_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/start_line"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:text="This is First Task" />
+
+            <TextView
+                android:id="@+id/desc"
+                style="@style/desctitleAddTaskStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/done_btn"
+                app:layout_constraintStart_toEndOf="@id/start_line"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                tools:text="This is First Description" />
+
+            <ImageView
+                android:id="@+id/done_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/check_box_background"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_check" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</com.zerobranch.layout.SwipeLayout>

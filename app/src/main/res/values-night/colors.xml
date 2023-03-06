@@ -6,8 +6,6 @@
     <color name="navy">#060E1E</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="backgroundScreen">#DFECDB</color>
-    <color name="bottomNav">#FFFFFFFF</color>
-    <color name="colorGreen">#16E757</color>
-    <color name="colorRed">#EC4B4B</color>
+    <color name="backgroundScreen">#060E1E</color>
+    <color name="bottomNav">#060E1E</color>
 </resources>
